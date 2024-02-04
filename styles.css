@@ -1,0 +1,115 @@
+body {
+    background: #020521;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.container {
+    height: 100vh;
+    margin: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+.uppertext-left {
+    color: white;
+    font-size: 2em;
+    padding-right: 1rem;
+    padding-top: 20px;
+    margin-left: -1rem;
+}
+.uppertext-right {
+    color: white;
+    padding-left: 1.5rem ;
+    font-size: 2em;
+    padding-top: 20px;
+    opacity: 0.2;
+}
+.toggle1 {
+    position: relative;
+    cursor: pointer;
+}
+.toggle1::before {
+    content: "";
+    position: relative;
+    width: 70px;
+    height: 28px;
+    top: 7px;
+    left: 5px;
+    background: #061283;
+    opacity: 0.7;
+    display: block;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+}
+.toggle1 span {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    background: #061283;
+    display: block;
+    border: 1px solid #061283;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(6, 18, 131, 0.4);
+    transition: all .3s ease;
+}
+.toggle1 span::before {
+    display: block;
+    margin: -8px;
+    width: 50px;
+    position: absolute;
+    content: "";
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(251, 249, 0, 0.5);
+    transform: scale(0);
+    opacity: 1;
+}
+.toggle1 span .fa-moon {
+    display: flex;
+    color: white;
+    justify-content: center;
+    margin-top: 10px;
+}
+.toggle1 span .fa-lightbulb {
+    display: none;
+}
+#checkbox:checked + .toggle1::before {
+    background: rgba(255, 255, 255, 0.7);
+}
+#checkbox:checked + .toggle1 span {
+    background: #5d56d2;
+    transform: translateX(35px);
+    border: 1px solid #5d56d2;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+#checkbox:checked + .toggle1 span::before {
+    transform: scale(2);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#checkbox:checked + .toggle1 span .fa-moon {
+    display: none;
+}
+#checkbox:checked + .toggle1 span .fa-lightbulb {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.lightUI {
+    background: #9792e2;
+    margin: -10px;
+    transition: all 0.7s ease-in-out;
+}
+.lightUI .uppertext-left {
+    opacity: 0.2;
+}
+.lightUI .uppertext-right {
+    opacity: 1;
+}
+
